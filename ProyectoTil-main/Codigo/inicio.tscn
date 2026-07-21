@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://hkxs47iapwu3"]
+
+[ext_resource type="Texture2D" uid="uid://cl5sgar1vcio3" path="res://images/background1.png" id="1_ylum6"]
+[ext_resource type="Script" uid="uid://c10kyksf5a6lj" path="res://button.gd" id="2_q0xg8"]
+[ext_resource type="Script" uid="uid://cc141oq12d41t" path="res://button_2.gd" id="3_yogrx"]
+
+[node name="Control" type="Control" unique_id=1455510537]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=751204523]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 655.0
+color = Color(0.1584723, 0.15847233, 0.1584723, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2009998568]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 652.0
+texture = ExtResource("1_ylum6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1436606157]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 28.0
+offset_right = 711.0
+offset_bottom = 247.0
+theme_override_colors/font_color = Color(0.83033526, 0.83033514, 0.83033514, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.14509805)
+theme_override_constants/shadow_offset_x = 2
+theme_override_font_sizes/font_size = 160
+text = "TIL"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=908474086]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 191.0
+offset_right = 793.0
+offset_bottom = 596.0
+theme_override_constants/separation = 23
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=45929326]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "JUGAR"
+script = ExtResource("2_q0xg8")
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1881962376]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "AJUSTES"
+script = ExtResource("3_yogrx")
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1973660448]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "SALIR"

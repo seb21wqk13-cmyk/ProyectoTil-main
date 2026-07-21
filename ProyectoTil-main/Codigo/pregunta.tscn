@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dj7e6ppb02v24"]
+
+[ext_resource type="Texture2D" uid="uid://cto5filai7atu" path="res://imagine.png" id="1_3broa"]
+[ext_resource type="Script" uid="uid://dqm0ieafbrjwy" path="res://label.gd" id="2_an7m1"]
+[ext_resource type="Script" uid="uid://b1sysoacxq016" path="res://line_edit.gd" id="3_yjo18"]
+[ext_resource type="Script" uid="uid://cjgf8v4hldbj1" path="res://label_2.gd" id="4_3broa"]
+
+[node name="Node2D" type="Node2D" unique_id=1534396811]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=780997234]
+offset_right = 1153.0
+offset_bottom = 655.0
+color = Color(0.1584723, 0.15847233, 0.1584723, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1287276667]
+offset_right = 1153.0
+offset_bottom = 652.0
+texture = ExtResource("1_3broa")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1896785583]
+offset_left = 25.0
+offset_top = 23.0
+offset_right = 947.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.14509805)
+theme_override_constants/shadow_offset_x = 2
+theme_override_font_sizes/font_size = 60
+text = "Donde lleva la tilde"
+script = ExtResource("2_an7m1")
+
+[node name="LineEdit" type="LineEdit" parent="Label" unique_id=1146627555]
+layout_mode = 0
+offset_left = 335.0
+offset_top = 362.0
+offset_right = 750.0
+offset_bottom = 466.0
+theme_override_font_sizes/font_size = 65
+script = ExtResource("3_yjo18")
+
+[node name="Label2" type="Label" parent="Label/LineEdit" unique_id=1551241613]
+layout_mode = 0
+offset_left = -326.0
+offset_top = -211.0
+offset_right = 596.0
+offset_bottom = -107.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.14509805)
+theme_override_constants/shadow_offset_x = 2
+theme_override_font_sizes/font_size = 54
+text = "Tu respuesta es:"
+script = ExtResource("4_3broa")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbobg2u2lgn22"]
+
+[ext_resource type="Texture2D" uid="uid://d3pbi3utafqhu" path="res://images/block.png" id="1_rey5g"]
+[ext_resource type="Script" uid="uid://dsdq46lrc83xy" path="res://area_2d.gd" id="3_qeyxv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rey5g"]
+size = Vector2(592.3137, 594.1729)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0r36w"]
+size = Vector2(59, 55)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32.5, 27.5)
+scale = Vector2(0.09960938, 0.079101555)
+shape = SubResource("RectangleShape2D_rey5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(32.5, 28.000004)
+scale = Vector2(0.0576172, 0.048828114)
+texture = ExtResource("1_rey5g")
+
+[node name="W" type="Area2D" parent="."]
+script = ExtResource("3_qeyxv")
+next_scene_path = "pregunta.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="W"]
+position = Vector2(31.5, 31.5)
+shape = SubResource("RectangleShape2D_0r36w")
